@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RSAEncrypt : NSObject
+@interface RSAEncryptOC : NSObject
 
 /// 通过公钥加密字符串 -- 返回base64
 /// @param string 需要加密的字符串

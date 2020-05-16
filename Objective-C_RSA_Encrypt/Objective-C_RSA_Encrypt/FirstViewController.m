@@ -7,7 +7,8 @@
 //
 
 #import "FirstViewController.h"
-#import "RSAEncrypt.h"
+#import "RSAEncryptOC.h"
+#import "Objective_C_RSA_Encrypt-Swift.h"
 
 @interface FirstViewController ()
 
@@ -18,10 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSString *pubkey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"public" ofType:@"pem"] encoding:NSUTF8StringEncoding error:nil];
-    NSString *privkey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"private" ofType:@"pem"] encoding:NSUTF8StringEncoding error:nil];;
-    NSString *encrypted = [RSAEncrypt encryptString:@"Hello World!" publicKey:pubkey];
+    NSString *privkey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"private" ofType:@"pem"] encoding:NSUTF8StringEncoding error:nil];
+    
+    //OC
+    NSString *encryptedOC = [RSAEncryptOC encryptString:@"Hello World!" publicKey:pubkey];
+    NSLog(@"encryptedOC: %@", encryptedOC);
+    NSString *decryptedOC = [RSAEncryptOC decryptString:encryptedOC privateKey:privkey];
+    NSLog(@"decryptedOC: %@", decryptedOC);
+    
+    //Swift
+    NSString *encrypted = [RSAEncrypt encryptStringWithString:@"Hello World!" pubKey:pubkey];
     NSLog(@"encrypted: %@", encrypted);
-    NSString *decrypted = [RSAEncrypt decryptString:encrypted privateKey:privkey];
+    NSString *decrypted = [RSAEncrypt decryptStringWithString:encrypted privKey:privkey];
     NSLog(@"decrypted: %@", decrypted);
 }
 

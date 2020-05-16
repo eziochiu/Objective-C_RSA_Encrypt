@@ -15,9 +15,10 @@
 		8C8E4449246F984300CAF168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8E4448246F984300CAF168 /* Assets.xcassets */; };
 		8C8E444C246F984300CAF168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8E444A246F984300CAF168 /* LaunchScreen.storyboard */; };
 		8C8E444F246F984300CAF168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E444E246F984300CAF168 /* main.m */; };
-		8C8E4457246F98C500CAF168 /* RSAEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E4456246F98C500CAF168 /* RSAEncrypt.m */; };
+		8C8E4457246F98C500CAF168 /* RSAEncryptOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E4456246F98C500CAF168 /* RSAEncryptOC.m */; };
 		8C8E445A246F9D4D00CAF168 /* private.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8C8E4458246F9D4D00CAF168 /* private.pem */; };
 		8C8E445B246F9D4D00CAF168 /* public.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8C8E4459246F9D4D00CAF168 /* public.pem */; };
+		8C8E445E246FA91E00CAF168 /* RSAEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E445D246FA91E00CAF168 /* RSAEncrypt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +36,12 @@
 		8C8E444B246F984300CAF168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C8E444D246F984300CAF168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C8E444E246F984300CAF168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8C8E4455246F98C500CAF168 /* RSAEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAEncrypt.h; sourceTree = "<group>"; };
-		8C8E4456246F98C500CAF168 /* RSAEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAEncrypt.m; sourceTree = "<group>"; };
+		8C8E4455246F98C500CAF168 /* RSAEncryptOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAEncryptOC.h; sourceTree = "<group>"; };
+		8C8E4456246F98C500CAF168 /* RSAEncryptOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptOC.m; sourceTree = "<group>"; };
 		8C8E4458246F9D4D00CAF168 /* private.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private.pem; sourceTree = "<group>"; };
 		8C8E4459246F9D4D00CAF168 /* public.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public.pem; sourceTree = "<group>"; };
+		8C8E445C246FA91E00CAF168 /* Objective-C_RSA_Encrypt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-C_RSA_Encrypt-Bridging-Header.h"; sourceTree = "<group>"; };
+		8C8E445D246FA91E00CAF168 /* RSAEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAEncrypt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +87,12 @@
 				8C8E444A246F984300CAF168 /* LaunchScreen.storyboard */,
 				8C8E444D246F984300CAF168 /* Info.plist */,
 				8C8E444E246F984300CAF168 /* main.m */,
-				8C8E4455246F98C500CAF168 /* RSAEncrypt.h */,
-				8C8E4456246F98C500CAF168 /* RSAEncrypt.m */,
+				8C8E4455246F98C500CAF168 /* RSAEncryptOC.h */,
+				8C8E4456246F98C500CAF168 /* RSAEncryptOC.m */,
 				8C8E4458246F9D4D00CAF168 /* private.pem */,
 				8C8E4459246F9D4D00CAF168 /* public.pem */,
+				8C8E445D246FA91E00CAF168 /* RSAEncrypt.swift */,
+				8C8E445C246FA91E00CAF168 /* Objective-C_RSA_Encrypt-Bridging-Header.h */,
 			);
 			path = "Objective-C_RSA_Encrypt";
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				TargetAttributes = {
 					8C8E4435246F984200CAF168 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -168,8 +174,9 @@
 				8C8E4444246F984200CAF168 /* SecondViewController.m in Sources */,
 				8C8E443B246F984200CAF168 /* AppDelegate.m in Sources */,
 				8C8E4441246F984200CAF168 /* FirstViewController.m in Sources */,
-				8C8E4457246F98C500CAF168 /* RSAEncrypt.m in Sources */,
+				8C8E4457246F98C500CAF168 /* RSAEncryptOC.m in Sources */,
 				8C8E443E246F984200CAF168 /* SceneDelegate.m in Sources */,
+				8C8E445E246FA91E00CAF168 /* RSAEncrypt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +236,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -287,6 +295,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -309,7 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AM4U55P6ZN;
 				INFOPLIST_FILE = "Objective-C_RSA_Encrypt/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,6 +329,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ezio.Objective-C-RSA-Encrypt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective-C_RSA_Encrypt/Objective-C_RSA_Encrypt-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -326,7 +340,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AM4U55P6ZN;
 				INFOPLIST_FILE = "Objective-C_RSA_Encrypt/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,6 +351,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ezio.Objective-C-RSA-Encrypt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective-C_RSA_Encrypt/Objective-C_RSA_Encrypt-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
